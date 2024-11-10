@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7857290067557981047}
   - component: {fileID: 8754802638501720061}
   - component: {fileID: 6531204385542136776}
+  - component: {fileID: 7129382937457369505}
+  - component: {fileID: -3463030271155805090}
   m_Layer: 0
   m_Name: PlayerWeapon
   m_TagString: Untagged
@@ -158,3 +160,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7129382937457369505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2796977337014495385}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b163d05abe97f6499276e808c5a3ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDepth: 0.1
+  maxDepth: 0.5
+  maxHoldTime: 2
+  weaponPrefab: {fileID: 0}
+  throwCooldown: 1
+  newWeaponInterval: 3
+  maxPrepareOffsetY: -2
+  prepareSpeed: 5
+  throwSpeed: 10
+--- !u!114 &-3463030271155805090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2796977337014495385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daaaf55140c300549abbce544df360b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  penetrationDepth: 0
