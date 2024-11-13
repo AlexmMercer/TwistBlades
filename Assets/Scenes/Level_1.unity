@@ -818,19 +818,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
       propertyPath: maxDepth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
-      propertyPath: minDepth
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
+      propertyPath: minDepth
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
       propertyPath: throwSpeed
-      value: 1200
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
       propertyPath: maxHoldTime
-      value: 0.5
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
       propertyPath: prepareSpeed
@@ -838,7 +838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
       propertyPath: throwCooldown
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
       propertyPath: prepareOffsetY
@@ -850,7 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
       propertyPath: newWeaponInterval
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3394712110007706255, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -926,6 +926,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2504517452942557827, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
+      propertyPath: m_Radius
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504517452942557827, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -963,7 +967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 311
+      value: 323
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -999,7 +1003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8857511858680076453, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: baseSpeed
-      value: 90
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8857511858680076453, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: speedVariance

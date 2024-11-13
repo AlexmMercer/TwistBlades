@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour
 
     private void StickToTarget(GameObject target)
     {
-        transform.SetParent(target.transform);
+
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -30,7 +30,8 @@ public class Weapon : MonoBehaviour
 
         // Adjust position for penetration depth
         Vector2 localPosition = transform.localPosition;
-        //localPosition.z = -penetrationDepth;
+        localPosition.y += 1 / penetrationDepth;
         transform.localPosition = localPosition;
+        transform.SetParent(target.transform);
     }
 }

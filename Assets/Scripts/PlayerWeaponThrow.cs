@@ -70,7 +70,9 @@ public class PlayerWeaponThrow : MonoBehaviour
         if (currentWeapon == null) return;
 
         float holdDuration = Mathf.Clamp(Time.time - holdStartTime, 0, maxHoldTime);
-        float penetrationDepth = Mathf.Lerp(minDepth, maxDepth, holdDuration / maxHoldTime) * 5f;
+        float penetrationDepth =  (Mathf.Lerp(minDepth, maxDepth, holdDuration / maxHoldTime) * 2.1f);
+        //float penetrationDepth = Mathf.Clamp(minDepth, maxDepth, holdDuration) * 100000f;
+        Debug.Log(penetrationDepth);
 
         Rigidbody2D rb = currentWeapon.GetComponent<Rigidbody2D>();
         if (rb != null)
