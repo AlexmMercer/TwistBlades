@@ -1,8 +1,7 @@
-// UI Manager Design for "Twisty Blades" Game
-// This UI Manager is designed with a professional Senior developer approach, focusing on maintainability, modularity, and scalability.
 
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject chooseLevelPanel;
     [SerializeField] private GameObject levelPanel;
     [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
     // Canvas Group for smooth transitions
     private CanvasGroup currentActivePanel;
@@ -125,12 +125,14 @@ public class UIManager : MonoBehaviour
     {
         ShowPanel(settingsPanel);
     }
-}
 
-/*
-Key Features:
-1. **Singleton Pattern**: The UIManager is implemented as a singleton, ensuring only one instance is active and can be accessed globally.
-2. **Fade Transitions**: Smooth fade-in and fade-out transitions are implemented using `CanvasGroup`, creating a polished user experience.
-3. **Centralized Control**: The UIManager controls which panels are visible, reducing the need for other scripts to manage UI state.
-4. **Scalability**: Adding new panels only requires defining the GameObject and adding a `Show` method, making future expansions easy.
-*/
+    // Method to update score text
+    public void UpdateScore(int score)
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = score.ToString();
+            Debug.Log("UIManager: Score updated to " + score);
+        }
+    }
+}
