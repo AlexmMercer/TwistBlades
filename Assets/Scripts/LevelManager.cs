@@ -36,9 +36,9 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         //currentLevelData = levels[currentLevelIndex];
-        //UIManager.Instance.UpdateScore(currentLevelData.knivesRequired);
+        UIManager.Instance.UpdateScore(knivesToCompleteLevel);
         Debug.Log("LevelManager: Start method called.");
-        Invoke("StartLevel", 0.1f); // ???????? ?? 0.1 ???????
+        Invoke("StartLevel", 0.05f);
     }
 
     public void StartLevel()
@@ -52,19 +52,16 @@ public class LevelManager : MonoBehaviour
     public void OnKnifeHitTarget()
     {
         Debug.Log("LevelManager: OnKnifeHitTarget called. Successful hits: " + successfulHits);
-        successfulHits++;
-        //currentLevelData.knivesRequired--;
-        //UIManager.Instance.UpdateScore(currentLevelData.knivesRequired);
+        knivesToCompleteLevel--;
+        UIManager.Instance.UpdateScore(knivesToCompleteLevel);
 
-        // ?????????, ???????? ?? ???????
-        if (successfulHits >= knivesToCompleteLevel)
+        if (knivesToCompleteLevel == 0)
         {
             Debug.Log("LevelManager: Level completed.");
             OnLevelCompleted?.Invoke();
         }
         else
         {
-            // ???? ??????? ??? ?? ????????, ??????? ????? ???
             PlayerWeaponThrow playerWeaponThrow = FindObjectOfType<PlayerWeaponThrow>();
             if (playerWeaponThrow != null)
             {
