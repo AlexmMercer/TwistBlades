@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     public event Action OnLevelFailedEvent;
 
     [SerializeField] private int knivesToCompleteLevel = 5;
-
+    [SerializeField] private GameObject levelTarget;
     [SerializeField] private List<LevelData> levels = new List<LevelData>();
     private int currentLevelIndex = 0;
     private LevelData currentLevelData;
@@ -58,6 +58,7 @@ public class LevelManager : MonoBehaviour
         if (knivesToCompleteLevel == 0)
         {
             Debug.Log("LevelManager: Level completed.");
+            UIManager.Instance.OpenVictoryWindow();
             OnLevelCompleted?.Invoke();
         }
         else
@@ -74,6 +75,8 @@ public class LevelManager : MonoBehaviour
     public void TriggerLevelFailed()
     {
         Debug.Log("LevelManager: OnLevelFailed called.");
+        UIManager.Instance.OpenLoseWindow();
+        levelTarget.GetComponent<TargetRotator>().enabled = false;
         OnLevelFailedEvent?.Invoke();
     }
 }

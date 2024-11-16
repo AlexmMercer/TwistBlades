@@ -9,6 +9,7 @@ public class TargetRotator : MonoBehaviour
     [Header("Rotation Settings")]
     [Tooltip("Base rotation speed in degrees per second.")]
     [SerializeField] private float baseSpeed = 30f;
+    public float BaseSpeed { get { return baseSpeed; } set { baseSpeed = value; } }
     [Tooltip("Maximum variance in rotation speed from the base speed.")]
     [SerializeField] private float speedVariance = 20f;
     [Tooltip("Interval in seconds at which the target changes its direction of rotation.")]

@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject chooseLevelPanel;
     [SerializeField] private GameObject levelPanel;
     [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject VictoryPanel;
+    [SerializeField] private GameObject LosePanel;
     [SerializeField] private TextMeshProUGUI scoreText;
 
     // Canvas Group for smooth transitions
@@ -55,7 +57,7 @@ public class UIManager : MonoBehaviour
         }
 
         currentActivePanel = panelCanvasGroup;
-        StartCoroutine(FadeIn(currentActivePanel, 0.5f));
+        StartCoroutine(FadeIn(currentActivePanel, 0.3f));
     }
 
     // Method to hide all panels (helper function)
@@ -134,5 +136,15 @@ public class UIManager : MonoBehaviour
             scoreText.text = score.ToString();
             Debug.Log("UIManager: Score updated to " + score);
         }
+    }
+
+    public void OpenVictoryWindow()
+    {
+        ShowPanel(VictoryPanel);
+    }
+
+    public void OpenLoseWindow()
+    {
+        ShowPanel(LosePanel);
     }
 }
