@@ -12,12 +12,15 @@ public class LevelManager : MonoBehaviour
     public event Action OnLevelFailedEvent;
 
     [SerializeField] private int knivesToCompleteLevel = 5;
+    [SerializeField] private float levelTimeLimit = 30f;
     [SerializeField] private GameObject levelTarget;
     [SerializeField] private List<LevelData> levels = new List<LevelData>();
     private int currentLevelIndex = 0;
     private LevelData currentLevelData;
 
     private int successfulHits;
+    private float levelStartTime;
+    private bool isLevelActive;
 
     private void Awake()
     {
@@ -40,6 +43,23 @@ public class LevelManager : MonoBehaviour
         Debug.Log("LevelManager: Start method called.");
         Invoke("StartLevel", 0.05f);
     }
+
+
+    private void Update()
+    {
+        //if (isLevelActive)
+        //{
+            float timeRemaining = Mathf.Round(Mathf.Max(0, levelTimeLimit - (Time.time - levelStartTime)));
+            UIManager.Instance.UpdateTimer(timeRemaining);
+
+            if (timeRemaining <= 0 && knivesToCompleteLevel != 0)
+            {
+                Debug.Log("LevelManager: Time limit reached. Level failed.");
+                TriggerLevelFailed();
+            }
+        //}
+    }
+
 
     public void StartLevel()
     {

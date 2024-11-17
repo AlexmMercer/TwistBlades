@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knivesToCompleteLevel: 12
+  levelTimeLimit: 8
   levelTarget: {fileID: 1953343717}
 --- !u!1 &162165405
 GameObject:
@@ -383,13 +384,13 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 169265565}
   - {fileID: 1292401568}
   - {fileID: 1351762794}
   - {fileID: 677110474}
   - {fileID: 286381458}
   - {fileID: 1093817465}
   - {fileID: 1657609042}
-  - {fileID: 169265565}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -424,14 +425,14 @@ RectTransform:
   m_GameObject: {fileID: 169265564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6460837, y: 1.3253, z: 1.3253}
+  m_LocalScale: {x: 0.98904735, y: 1.375863, z: 1.1659857}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 162165409}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7, y: 171.8}
+  m_AnchoredPosition: {x: -69, y: 178}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &169265566
@@ -454,7 +455,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00:00
+  m_text: '0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -517,7 +520,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 130.06361, y: 0, z: 0, w: 12.24363}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -567,6 +570,7 @@ MonoBehaviour:
   VictoryPanel: {fileID: 286381457}
   LosePanel: {fileID: 1093817464}
   scoreText: {fileID: 1292401569}
+  timerText: {fileID: 169265566}
 --- !u!4 &257090940
 Transform:
   m_ObjectHideFlags: 0
@@ -2316,7 +2320,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 1, b: 0.019954205, a: 1}
+    m_NormalColor: {r: 0, g: 0.6075471, b: 0.20112437, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2536,7 +2540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 264
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalPosition.z

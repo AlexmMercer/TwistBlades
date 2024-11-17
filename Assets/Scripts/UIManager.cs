@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject VictoryPanel;
     [SerializeField] private GameObject LosePanel;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI timerText;
 
     // Canvas Group for smooth transitions
     private CanvasGroup currentActivePanel;
@@ -135,6 +136,15 @@ public class UIManager : MonoBehaviour
         {
             scoreText.text = score.ToString();
             Debug.Log("UIManager: Score updated to " + score);
+        }
+    }
+
+    public void UpdateTimer(float timeLeft)
+    {
+        if (scoreText != null)
+        {
+            timerText.text = timeLeft.ToString();
+            Debug.Log("UIManager: Timer updated to " + timeLeft);
         }
     }
 
