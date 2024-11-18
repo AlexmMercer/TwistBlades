@@ -25,14 +25,8 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        // Ensure only one instance of UIManager exists
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -135,16 +129,16 @@ public class UIManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = score.ToString();
-            Debug.Log("UIManager: Score updated to " + score);
+            //Debug.Log("UIManager: Score updated to " + score);
         }
     }
 
     public void UpdateTimer(float timeLeft)
     {
-        if (scoreText != null)
+        if (timerText != null)
         {
             timerText.text = timeLeft.ToString();
-            Debug.Log("UIManager: Timer updated to " + timeLeft);
+            //Debug.Log("UIManager: Timer updated to " + timeLeft);
         }
     }
 
