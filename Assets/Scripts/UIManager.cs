@@ -1,8 +1,10 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -31,7 +33,13 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        ShowPanel(startScreen);
+        try
+        {
+            ShowPanel(startScreen);
+        } catch(Exception e)
+        {
+            Debug.Log("Aboba");
+        }
     }
 
     // Public method to show the desired panel
@@ -150,5 +158,10 @@ public class UIManager : MonoBehaviour
     public void OpenLoseWindow()
     {
         ShowPanel(LosePanel);
+    }
+
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene("Level_1");
     }
 }

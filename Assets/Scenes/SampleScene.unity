@@ -2144,6 +2144,10 @@ MonoBehaviour:
   chooseLevelPanel: {fileID: 522658991}
   levelPanel: {fileID: 492914105}
   settingsPanel: {fileID: 0}
+  VictoryPanel: {fileID: 0}
+  LosePanel: {fileID: 0}
+  scoreText: {fileID: 0}
+  timerText: {fileID: 0}
 --- !u!4 &809244137
 Transform:
   m_ObjectHideFlags: 0
