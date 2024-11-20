@@ -14,16 +14,18 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private int knivesToCompleteLevel = 5;
     [SerializeField] private float levelTimeLimit = 30f;
+    [SerializeField] private int currentLevelIndex = 0;
+    public int CurrentLevelIndex {  get { return currentLevelIndex; } }
     [SerializeField] private GameObject levelTarget;
     [SerializeField] private GameObject Player;
     [SerializeField] private List<LevelData> levels = new List<LevelData>();
-    private int currentLevelIndex = 0;
     private LevelData currentLevelData;
 
     private int successfulHits = 0;
     private float levelStartTime;
     private bool isLevelActive;
-    //private float timeRemaining;
+    private int isLevelCompleted = 0;
+    public int LevelCompleted { get { return isLevelCompleted; } }
 
     private void Awake()
     {
@@ -55,7 +57,6 @@ public class LevelManager : MonoBehaviour
 
             if (timeRemaining <= 0 && knivesToCompleteLevel != 0)
             {
-                //Debug.Log("LevelManager: Time limit reached. Level failed.");
                 TriggerLevelFailed();
             }
         }
@@ -64,17 +65,13 @@ public class LevelManager : MonoBehaviour
 
     public void StartLevel()
     {
-        //Debug.Log("LevelManager: StartLevel called.");
-        //successfulHits = 0;
         isLevelActive = true;
         levelStartTime = Time.time;
-
         Player.GetComponent<PlayerWeaponThrow>().enabled = true;
         levelTarget.GetComponent<TargetRotator>().enabled = true;
         Debug.Log(levelTimeLimit);
         Debug.Log(knivesToCompleteLevel);
         OnLevelStart?.Invoke();
-        //Debug.Log("LevelManager: OnLevelStart event invoked.");
     }
 
     public void OnKnifeHitTarget()
@@ -85,6 +82,8 @@ public class LevelManager : MonoBehaviour
         if (knivesToCompleteLevel == 0)
         {
             UIManager.Instance.OpenVictoryWindow();
+            isLevelCompleted = 1;
+            PlayerPrefs.SetInt("isLevelCompleted", isLevelCompleted);
             OnLevelCompleted?.Invoke();
         }
         else

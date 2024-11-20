@@ -29,10 +29,6 @@ public class PlayerWeaponThrow : MonoBehaviour
         {
             levelManager.OnLevelStart += SpawnNewWeapon;
         }
-        else
-        {
-
-        }
     }
 
 

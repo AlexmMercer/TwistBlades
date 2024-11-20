@@ -160,8 +160,8 @@ public class UIManager : MonoBehaviour
         ShowPanel(LosePanel);
     }
 
-    public void LoadLevel()
+    public void LoadLevel(int levelNumber)
     {
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene($"Level_{levelNumber}");
     }
 }
