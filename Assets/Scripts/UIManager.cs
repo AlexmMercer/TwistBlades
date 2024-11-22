@@ -164,4 +164,9 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene($"Level_{levelNumber}");
     }
+
+    public void GoHome()
+    {
+        SceneManager.LoadScene("MainMenuScene");
+    }
 }
