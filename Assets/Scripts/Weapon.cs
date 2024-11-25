@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
         if (collision.gameObject.CompareTag("Target") && isAttackWeapon == true)
         {
             //Debug.Log("Weapon: Collision with target detected.");
+            //Handheld.Vibrate();
             StickToTarget(collision.gameObject);
             LevelManager.Instance.OnKnifeHitTarget();
         }

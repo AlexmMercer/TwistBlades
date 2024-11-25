@@ -409,9 +409,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c61777e7202dc246b4ce33ee4156fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knivesToCompleteLevel: 7
+  knivesToCompleteLevel: 6
   levelTimeLimit: 15
-  currentLevelIndex: 0
+  currentLevelIndex: 5
   levelTarget: {fileID: 1953343717}
   Player: {fileID: 1519908630}
 --- !u!114 &169265566 stripped
@@ -1082,9 +1082,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3256334328996803178, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 257090939}
+    - target: {fileID: 3256334328996803178, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoHome
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 257090939}
+    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4439553170830405997, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 261
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660820407995642452, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 257090939}
+    - target: {fileID: 5660820407995642452, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoHome
       objectReference: {fileID: 0}
     - target: {fileID: 6641532411957616414, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1097,6 +1141,14 @@ PrefabInstance:
     - target: {fileID: 6874478554861875670, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -333
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037589662454200600, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 257090939}
+    - target: {fileID: 7037589662454200600, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoHome
       objectReference: {fileID: 0}
     - target: {fileID: 7127606116922702561, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_text
@@ -1225,7 +1277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
       propertyPath: throwSpeed
-      value: 1100
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 165597332841315477, guid: bcca1dcc4690d434fb33b22b3064d82e, type: 3}
       propertyPath: maxHoldTime
@@ -1350,15 +1402,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalScale.x
-      value: 34.574463
+      value: 26.750954
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalScale.y
-      value: 34.574463
+      value: 26.750954
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalScale.z
-      value: 34.574463
+      value: 26.750954
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1402,7 +1454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8857511858680076453, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: baseSpeed
-      value: 125
+      value: 145
       objectReference: {fileID: 0}
     - target: {fileID: 8857511858680076453, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: speedVariance
@@ -1414,7 +1466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8857511858680076453, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: randomizeDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8857511858680076453, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: changeDirectionInterval

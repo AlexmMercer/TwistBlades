@@ -44,10 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b163d05abe97f6499276e808c5a3ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 2796977337014495385, guid: f23bd5724d1cbf2488dc340cac5c22e9, type: 3}
+  maxHoldTime: 1
+  throwCooldown: 1
+  throwSpeed: 1000
   minDepth: 0.1
   maxDepth: 3
-  maxHoldTime: 1
-  weaponPrefab: {fileID: 2796977337014495385, guid: f23bd5724d1cbf2488dc340cac5c22e9, type: 3}
-  prepareOffsetY: -1
-  prepareSpeed: 5
-  throwSpeed: 10
