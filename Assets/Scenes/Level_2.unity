@@ -323,38 +323,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3256334328996803178, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+    - target: {fileID: 3649560625095613051, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 257090939}
     - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 257090939}
-    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5660820407995642452, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -367,6 +343,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 257090939}
+    - target: {fileID: 7450910979407191466, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8857914091874936722, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -960,15 +940,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalScale.x
-      value: 26.01763
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalScale.y
-      value: 26.01763
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalScale.z
-      value: 26.01763
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7790907113732698156, guid: 64391776d182eab4eb3583dd7573bcfa, type: 3}
       propertyPath: m_LocalPosition.x
