@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knivesToCompleteLevel: 8
   levelTimeLimit: 21
-  currentLevelIndex: 6
+  currentLevelIndex: 7
   levelTarget: {fileID: 1953343717}
   Player: {fileID: 1519908630}
 --- !u!114 &169265566 stripped
@@ -1279,6 +1279,10 @@ PrefabInstance:
     - target: {fileID: 7127606116922702561, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_text
       value: Level 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450910979407191466, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7885603390944922690, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_IsActive

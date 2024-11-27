@@ -69,6 +69,7 @@ public class LevelManager : MonoBehaviour
         levelStartTime = Time.time;
         Player.GetComponent<PlayerWeaponThrow>().enabled = true;
         levelTarget.GetComponent<TargetRotator>().enabled = true;
+        UIManager.Instance.UpdateScore(knivesToCompleteLevel);
         Debug.Log(levelTimeLimit);
         Debug.Log(knivesToCompleteLevel);
         OnLevelStart?.Invoke();
