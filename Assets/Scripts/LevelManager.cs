@@ -3,6 +3,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -15,29 +16,25 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private int knivesToCompleteLevel = 5;
     [SerializeField] private float levelTimeLimit = 30f;
     [SerializeField] private int currentLevelIndex = 0;
+
     public int CurrentLevelIndex {  get { return currentLevelIndex; } }
     [SerializeField] private GameObject levelTarget;
     [SerializeField] private GameObject Player;
-    [SerializeField] private List<LevelData> levels = new List<LevelData>();
-    private LevelData currentLevelData;
+
 
     private int successfulHits = 0;
     private float levelStartTime;
     private bool isLevelActive;
-    private int isLevelCompleted = 0;
-    public int LevelCompleted { get { return isLevelCompleted; } }
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            //Debug.Log("LevelManager: Instance created.");
         }
         else
         {
             Destroy(gameObject);
-            //Debug.LogWarning("LevelManager: Duplicate instance detected and destroyed.");
         }
     }
 
@@ -75,6 +72,12 @@ public class LevelManager : MonoBehaviour
         OnLevelStart?.Invoke();
     }
 
+    public void SaveLevelProgress(int levelIndex)
+    {
+        PlayerPrefs.SetInt("LevelProgress", levelIndex);
+        PlayerPrefs.Save();
+    }
+
     public void OnKnifeHitTarget()
     {
         knivesToCompleteLevel--;
@@ -83,8 +86,7 @@ public class LevelManager : MonoBehaviour
         if (knivesToCompleteLevel == 0)
         {
             UIManager.Instance.OpenVictoryWindow();
-            isLevelCompleted = 1;
-            PlayerPrefs.SetInt("isLevelCompleted", isLevelCompleted);
+            SaveLevelProgress(currentLevelIndex);
             OnLevelCompleted?.Invoke();
         }
         else
@@ -110,7 +112,6 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("Restarting level");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //OnLevelStart?.Invoke();
     }
 
 

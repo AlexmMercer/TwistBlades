@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c61777e7202dc246b4ce33ee4156fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knivesToCompleteLevel: 5
+  knivesToCompleteLevel: 7
   levelTimeLimit: 35
   currentLevelIndex: 4
   levelTarget: {fileID: 1953343717}
@@ -388,6 +388,7 @@ MonoBehaviour:
   LosePanel: {fileID: 1093817464}
   scoreText: {fileID: 1292401569}
   timerText: {fileID: 169265566}
+  levelButtons: []
 --- !u!4 &257090940
 Transform:
   m_ObjectHideFlags: 0
@@ -774,6 +775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3649560625095613051, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 257090939}
     - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
@@ -804,8 +809,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4439553170830405997, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 261
+      value: 119
       objectReference: {fileID: 0}
+    - target: {fileID: 5660820407995642452, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 257090939}
     - target: {fileID: 6641532411957616414, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -832,7 +841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8806828598655738098, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -316
+      value: -526
       objectReference: {fileID: 0}
     - target: {fileID: 8857914091874936722, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_Pivot.x

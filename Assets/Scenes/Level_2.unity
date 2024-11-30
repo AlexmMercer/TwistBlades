@@ -291,6 +291,7 @@ MonoBehaviour:
   LosePanel: {fileID: 640310587}
   scoreText: {fileID: 640310586}
   timerText: {fileID: 640310585}
+  levelButtons: []
 --- !u!4 &257090940
 Transform:
   m_ObjectHideFlags: 0
@@ -331,6 +332,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 257090939}
+    - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5660820407995642452, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -343,7 +348,15 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 257090939}
+    - target: {fileID: 7127606116922702561, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_text
+      value: Level 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7450910979407191466, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885603390944922690, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

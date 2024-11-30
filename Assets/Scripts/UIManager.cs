@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject LosePanel;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private Button[] levelButtons;
 
     // Canvas Group for smooth transitions
     private CanvasGroup currentActivePanel;
@@ -36,6 +37,7 @@ public class UIManager : MonoBehaviour
         try
         {
             ShowPanel(startScreen);
+            LoadLevelProgress();
         } catch(Exception e)
         {
             Debug.Log("Aboba");
@@ -169,4 +171,23 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenuScene");
     }
+
+    public void LoadLevelProgress()
+    {
+        int progress = PlayerPrefs.GetInt("LevelProgress", 0);
+
+        for (int i = 0; i < levelButtons.Length; i++)
+        {
+            if (i <= progress)
+            {
+                levelButtons[i].interactable = true;
+            }
+            else
+            {
+                levelButtons[i].interactable = false;
+            }
+        }
+    }
+
+
 }

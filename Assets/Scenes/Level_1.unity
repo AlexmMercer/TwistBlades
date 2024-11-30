@@ -209,6 +209,7 @@ MonoBehaviour:
   LosePanel: {fileID: 1938911354}
   scoreText: {fileID: 1938911353}
   timerText: {fileID: 1938911352}
+  levelButtons: []
 --- !u!4 &257090940
 Transform:
   m_ObjectHideFlags: 0
@@ -416,6 +417,14 @@ PrefabInstance:
     - target: {fileID: 3256334328996803178, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3649560625095613051, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 257090939}
+    - target: {fileID: 3649560625095613051, guid: 4dd204863130be94baac4bf496102aed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoHome
       objectReference: {fileID: 0}
     - target: {fileID: 4072191320724952986, guid: 4dd204863130be94baac4bf496102aed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
