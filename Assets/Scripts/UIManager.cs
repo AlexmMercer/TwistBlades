@@ -1,8 +1,10 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -12,7 +14,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject chooseLevelPanel;
     [SerializeField] private GameObject levelPanel;
     [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject VictoryPanel;
+    [SerializeField] private GameObject LosePanel;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private Button[] levelButtons;
 
     // Canvas Group for smooth transitions
     private CanvasGroup currentActivePanel;
@@ -22,19 +28,20 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        // Ensure only one instance of UIManager exists
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
-        ShowPanel(startScreen);
+        try
+        {
+            ShowPanel(startScreen);
+            LoadLevelProgress();
+        } catch(Exception e)
+        {
+            Debug.Log("Aboba");
+        }
     }
 
     // Public method to show the desired panel
@@ -55,7 +62,7 @@ public class UIManager : MonoBehaviour
         }
 
         currentActivePanel = panelCanvasGroup;
-        StartCoroutine(FadeIn(currentActivePanel, 0.5f));
+        StartCoroutine(FadeIn(currentActivePanel, 0.3f));
     }
 
     // Method to hide all panels (helper function)
@@ -132,7 +139,55 @@ public class UIManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = score.ToString();
-            Debug.Log("UIManager: Score updated to " + score);
+            //Debug.Log("UIManager: Score updated to " + score);
         }
     }
+
+    public void UpdateTimer(float timeLeft)
+    {
+        if (timerText != null)
+        {
+            timerText.text = timeLeft.ToString();
+            //Debug.Log("UIManager: Timer updated to " + timeLeft);
+        }
+    }
+
+    public void OpenVictoryWindow()
+    {
+        ShowPanel(VictoryPanel);
+    }
+
+    public void OpenLoseWindow()
+    {
+        ShowPanel(LosePanel);
+    }
+
+    public void LoadLevel(int levelNumber)
+    {
+        SceneManager.LoadScene($"Level_{levelNumber}");
+    }
+
+    public void GoHome()
+    {
+        SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void LoadLevelProgress()
+    {
+        int progress = PlayerPrefs.GetInt("LevelProgress", 0);
+
+        for (int i = 0; i < levelButtons.Length; i++)
+        {
+            if (i <= progress)
+            {
+                levelButtons[i].interactable = true;
+            }
+            else
+            {
+                levelButtons[i].interactable = false;
+            }
+        }
+    }
+
+
 }

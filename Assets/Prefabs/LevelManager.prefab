@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4929789424845786703
+--- !u!1 &4125720529421236428
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3394712110007706255}
-  - component: {fileID: 165597332841315477}
+  - component: {fileID: 4631280678431573695}
+  - component: {fileID: 8716780679144884243}
   m_Layer: 0
-  m_Name: Player
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3394712110007706255
+--- !u!4 &4631280678431573695
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4929789424845786703}
+  m_GameObject: {fileID: 4125720529421236428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 151, y: 57, z: 15.770632}
+  m_LocalPosition: {x: 98.75874, y: 347.95154, z: -0.8824909}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &165597332841315477
+--- !u!114 &8716780679144884243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4929789424845786703}
+  m_GameObject: {fileID: 4125720529421236428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b163d05abe97f6499276e808c5a3ff6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c61777e7202dc246b4ce33ee4156fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 2796977337014495385, guid: f23bd5724d1cbf2488dc340cac5c22e9, type: 3}
-  maxHoldTime: 1
-  throwCooldown: 1
-  throwSpeed: 1000
-  minDepth: 0.1
-  maxDepth: 3
+  knivesToCompleteLevel: 10
+  levelTimeLimit: 14
+  currentLevelIndex: 0
+  levelTarget: {fileID: 0}
+  Player: {fileID: 0}
